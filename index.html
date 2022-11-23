@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Transfer Client</title>
+	<link rel="stylesheet" href="https://fahrzeugschein-scanner.de/css/fileTransfer.min.css"></link>
+	
+</head>
+<body>
+	<div id="fileTransfer"></div>	
+	<script type="text/javascript" src="https://fahrzeugschein-scanner.de/js/fileTransfer.min.js"></script>
+	<script>
+		const ft = new FileTransfer();
+		document.addEventListener("DOMContentLoaded", async function () {
+			ft.init();
+		});
+		ft.addEventListener("fileReceived",  (url) => {
+			// you will receive the URL where the file is uploaded 
+			// use this URL to call one of the URL scan endpionts like
+			// https://api.fahrzeugschein-scanner.de/scan_url_de
+			// and / or download the file
+
+			// note: it is recommended to pass the URL to your server and
+			// start the call of the URL scan endpionts there
+			// so that you will not expose your access key
+		})
+	</script>
+</body>
+</html>
