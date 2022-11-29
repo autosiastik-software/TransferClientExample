@@ -23,3 +23,12 @@ Default: true
 `showLoader`:  
 Gibt an, ob ein Loading Spinner angezeigt werden soll, wenn die Übertragung gestartet wurde.  
 Default: true  
+  
+Die Options können dem Konstruktor wie folgt übergeben werden:  
+  
+```
+const ft = new FileTransfer({
+	qrCodeSize: 400,
+	transferFileSize: 1000
+});
+```
